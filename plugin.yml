@@ -1,0 +1,5 @@
+name: FFA
+main: FunnyBuddys\FFA\Main
+version: 1.0
+api: [4.0.0, 3.0.0]
+author: FunnyBuddys
