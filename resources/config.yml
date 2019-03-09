@@ -1,0 +1,24 @@
+---
+Prefix: §a§lFFA§r §8| §f
+Armor:
+- 306
+- 307
+- 308
+- 309
+Items:
+- - 267
+  - 0
+  - 1
+- - 322
+  - 0
+  - 5
+JoinMessage: §e{PLAYER}§a joined the game.
+LeaveMessage: §e{PLAYER}§c left the game.
+KillMessage: §aYou killed §c{VICTIM}§a!
+KilledMessage: §cYou were killed by §e{KILLER}§c!
+DeathMessage: §cYou died!
+Title: §l§aFFA
+Subtitle: §eWelcome to the game!
+SpawnRadius: 4
+ProtectionMessage: You're too close to the spawn to fight with other players.
+...
