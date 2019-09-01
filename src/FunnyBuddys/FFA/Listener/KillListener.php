@@ -39,40 +39,12 @@ class KillListener implements Listener {
                 $armor = $config->get("Armor");
                 $items = $config->get("Items");
 
-                if($killer->isOnline()){
-
-                    $xk = $killer->getX();
-                    $yk = $killer->getY();
-                    $zk = $killer->getZ();
-
-                    $x = $victim->getX();
-                    $y = $victim->getY();
-                    $z = $victim->getZ();
-
-                    $xxk = $killer->getLevel()->getSafeSpawn()->getX();
-                    $yyk = $killer->getLevel()->getSafeSpawn()->getY();
-                    $zzk = $killer->getLevel()->getSafeSpawn()->getZ();
-
-                    $xx = $victim->getLevel()->getSafeSpawn()->getX();
-                    $yy = $victim->getLevel()->getSafeSpawn()->getY();
-                    $zz = $victim->getLevel()->getSafeSpawn()->getZ();
-
-                    if(abs($xx-$x)<$config->get("SpawnRadius")&&abs($yy-$y)<$config->get("SpawnRadius")&&abs($zz-$z)<$config->get("SpawnRadius")){
-
-                        if(abs($xxk-$xk)<$config->get("SpawnRadius")&&abs($yyk-$yk)<$config->get("SpawnRadius")&&abs($zzk-$zk)<$config->get("SpawnRadius")){
-                            $event->setCancelled(true);
-                            $killer->sendMessage($config->get("Prefix") . $config->get("ProtectionMessage"));
-                        }
-                    }else{
-                        $event->setCancelled(false);
-                    }
-                }
-
                 $victim->setHealth(20);
                 $victim->removeAllEffects();
                 $killedMessage = str_replace("{KILLER}", $killer->getNameTag(), $config->get("KilledMessage"));
                 $killedMessage2 = str_replace("{VICTIM}", $victim->getNameTag(), $killedMessage);
-                $victim->sendMessage($config->get("Prefix") . $killedMessage2);
+                $killedMessage3 = str_replace("{LAST_HEALTH}", round($killer->getHealth() / 2, 1, 5), $killedMessage2);
+                $victim->sendMessage($config->get("Prefix") . $killedMessage3);
                 $victim->teleport($victim->getLevel()->getSafeSpawn());
                 $victimconfig = new Config($this->main->getDataFolder() . "player/" . $victim->getName() . ".yml", Config::YAML);
                 $victimconfig->set("Deaths", $victimconfig->get("Deaths") + 1);
