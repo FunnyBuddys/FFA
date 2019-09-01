@@ -48,7 +48,7 @@ class Main extends PluginBase{
             $config->set("JoinMessage", "§e{PLAYER}§a joined the game.");
             $config->set("LeaveMessage", "§e{PLAYER}§c left the game.");
             $config->set("KillMessage", "§aYou killed §c{VICTIM}§a!");
-            $config->set("KilledMessage", "§cYou were killed by §e{KILLER}§c!");
+            $config->set("KilledMessage", "§cYou were killed by §e{KILLER} §6[{LAST_HEALTH}]§c! ");
             $config->set("DeathMessage", "§cYou died!");
             $config->set("Title", "§l§aFFA");
             $config->set("Subtitle", "§eWelcome to the game!");
