@@ -18,6 +18,9 @@ jobs:
       
     - name: Download artifact
       uses: actions/download-artifact@v1.0.0
+      with:
+        name: FFA
+        path: .
 
     - name: PHP Copy Paste Detector
       uses: StephaneBour/actions-php-cpd@1.0
