@@ -15,12 +15,6 @@ jobs:
   
     - name: composer-installer-action
       uses: nanasess/composer-installer-action@v2.0.0
-      
-    - name: Download artifact
-      uses: actions/download-artifact@v1.0.0
-      with:
-        name: FFA
-        path: .
 
     - name: PHP Copy Paste Detector
       uses: StephaneBour/actions-php-cpd@1.0
