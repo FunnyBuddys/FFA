@@ -9,9 +9,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress --no-suggest
       
     - name: PHP Syntax Checker (Lint)
       uses: StephaneBour/actions-php-lint@7.3
