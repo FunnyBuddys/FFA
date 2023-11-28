@@ -6,13 +6,14 @@ use FunnyBuddys\FFA\Listener\JoinListener;
 use FunnyBuddys\FFA\Listener\KillListener;
 use FunnyBuddys\FFA\Listener\QuitListener;
 use pocketmine\item\Item;
+use pocketmine\item\VanillaItems;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase{
 
-    public function onEnable() {
+    public function onEnable() : void {
         $this->getLogger()->info(TextFormat::GREEN . "FFA has been loaded successfully!");
         $this->getLogger()->warning(TextFormat::YELLOW . base64_decode("VGhlIHBsdWdpbiB3YXMgZGV2ZWxvcGVkIGJ5IEZ1bm55QnVkZHlz"));
 
@@ -27,15 +28,15 @@ class Main extends PluginBase{
             $config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
 
             /* --- Armor --- */
-            $armor = array(Item::IRON_HELMET, Item::IRON_CHESTPLATE, Item::IRON_LEGGINGS, Item::IRON_BOOTS);
+            $armor = array("iron_helmet", "iron_chestplate", "iron_leggings", "iron_boots");
 
             /* --- Items --- */
             $items = array(
                 array(
-                    Item::IRON_SWORD, 0, 1
+                    "iron_sword", 1
                 ),
                 array(
-                    Item::GOLDEN_APPLE, 0, 5
+                    "golden_apple", 3
                 )
             );
 

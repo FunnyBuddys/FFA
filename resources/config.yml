@@ -1,21 +1,19 @@
 ---
 Prefix: §a§lFFA§r §8| §f
 Armor:
-- 306
-- 307
-- 308
-- 309
+- iron_helmet
+- iron_chestplate
+- iron_leggings
+- iron_boots
 Items:
-- - 267
-  - 0
+- - iron_sword
   - 1
-- - 322
-  - 0
-  - 5
+- - golden_apple
+  - 3
 JoinMessage: §e{PLAYER}§a joined the game.
 LeaveMessage: §e{PLAYER}§c left the game.
 KillMessage: §aYou killed §c{VICTIM}§a!
-KilledMessage: §cYou were killed by §e{KILLER}§c!
+KilledMessage: '§cYou were killed by §e{KILLER} §6[{LAST_HEALTH}]§c! '
 DeathMessage: §cYou died!
 Title: §l§aFFA
 Subtitle: §eWelcome to the game!
